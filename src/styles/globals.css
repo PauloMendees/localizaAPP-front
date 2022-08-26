@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --white: #f7f7f7;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+
+  background-color: var(--white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 200px;
+  margin-left: -15px;
+}
+
+.link {
+  font-size: 11px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #0059ff;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.left-arrow {
+  transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  display: flex;
+}
+
+.dropzone {
+  width: 100%;
+  height: 125px;
+  opacity: 0.8;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23333' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.dropzone-error {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23E22C44FF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  color: #ff2929
+}
+
+.dropzone-accept {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%2312B875FF' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  color: #2aff8a
+}
+
+.text-uploaded {
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  padding: 20px
+}
+
+/* Cor de fundo do autocomplete */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #fff inset;
+}
+ 
+/* Cor do texto do autocomplete */
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(0, 0, 0) !important;
+}
